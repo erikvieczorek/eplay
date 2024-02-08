@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { cores } from '../../styles '
+import { colors } from '../../styles '
 import { TagContainer } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
-import fechar from '../../assets/images/fechar.png'
+import closeIcon from '../../assets/images/fechar.png'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -34,11 +34,18 @@ export const Sidebar = styled.aside`
   padding: 40px 16px 0 16px;
   max-width: 360px;
   width: 100%;
-  background-color: ${cores.cinza};
+  background-color: ${colors.grey};
 
   ${ButtonContainer} {
     max-width: 100%;
     width: 100%;
+  }
+
+  .empty-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.white};
+    text-align: center;
   }
 `
 
@@ -46,12 +53,12 @@ export const Prices = styled.p`
   margin-bottom: 24px;
   font-weight: bold;
   font-size: 14px;
-  color: ${cores.branca};
+  color: ${colors.white};
 
   span {
     display: block;
     font-size: 12px;
-    color: ${cores.cinzaClaro};
+    color: ${colors.lightGrey};
   }
 `
 
@@ -60,14 +67,14 @@ export const Quantity = styled.p`
   margin-bottom: 16px;
   font-weight: bold;
   font-size: 16px;
-  color: ${cores.branca};
+  color: ${colors.white};
 `
 
 export const CartItem = styled.li`
   display: flex;
   position: relative;
   padding: 8px 0;
-  border-bottom: 1px solid ${cores.cinzaClaro};
+  border-bottom: 1px solid ${colors.lightGrey};
 
   img {
     margin-right: 24px;
@@ -79,14 +86,14 @@ export const CartItem = styled.li`
   h3 {
     font-size: 16px;
     font-weight: bold;
-    color: ${cores.branca};
+    color: ${colors.white};
   }
 
   span {
     display: block;
     font-size: 14px;
     font-weight: bold;
-    color: ${cores.branca};
+    color: ${colors.white};
   }
 
   ${TagContainer} {
@@ -103,6 +110,6 @@ export const CartItem = styled.li`
     height: 16px;
     border: none;
     background-color: transparent;
-    background-image: url(${fechar});
+    background-image: url(${closeIcon});
   }
 `

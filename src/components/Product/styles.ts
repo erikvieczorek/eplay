@@ -1,16 +1,17 @@
 import styled from 'styled-components'
-import { cores } from '../../styles '
-import { TagContainer } from '../Tag/styles'
 import { Link } from 'react-router-dom'
+import { TagContainer } from '../Tag/styles'
+import { colors } from '../../styles '
 
 export const Card = styled(Link)`
-  background-color: ${cores.cinza};
-  border-radius: 8px;
-  padding: 8px;
-  position: relative;
-  text-decoration: none;
-  color: ${cores.branca};
   display: block;
+  position: relative;
+  height: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: ${colors.grey};
+  color: ${colors.white};
 
   img {
     display: block;
@@ -24,19 +25,19 @@ export const Card = styled(Link)`
   }
 `
 
-export const Titulo = styled.h3`
-  font-weight: bold;
-  font-size: 16px;
+export const Title = styled.h3`
   display: block;
   margin-top: 16px;
   margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
 `
 
-export const Descricao = styled.p`
-  font-size: 14px;
-  line-height: 22px;
+export const Description = styled.p`
   display: block;
   margin-top: 16px;
+  font-size: 14px;
+  line-height: 22px;
 `
 export const Infos = styled.div`
   position: absolute;
