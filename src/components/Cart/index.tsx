@@ -35,7 +35,7 @@ const Cart = () => {
       <S.Sidebar>
         {items.length > 0 ? (
           <>
-            <ul>
+            <S.CartList>
               {items.map((item) => (
                 <S.CartItem key={item.id}>
                   <img src={item.media.thumbnail} alt={item.name} />
@@ -48,7 +48,7 @@ const Cart = () => {
                   <button onClick={() => removeItem(item.id)} type="button" />
                 </S.CartItem>
               ))}
-            </ul>
+            </S.CartList>
             <S.Quantity>{items.length} jogo(s) no carrinho</S.Quantity>
             <S.Prices>
               Total de {parseToBrl(getTotalPrice(items))}{' '}

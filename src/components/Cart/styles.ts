@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles '
+import { breakpoints, colors } from '../../styles '
 import { TagContainer } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
 import closeIcon from '../../assets/images/fechar.png'
@@ -47,6 +47,10 @@ export const Sidebar = styled.aside`
     color: ${colors.white};
     text-align: center;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 80%;
+  }
 `
 
 export const Prices = styled.p`
@@ -68,6 +72,11 @@ export const Quantity = styled.p`
   font-weight: bold;
   font-size: 16px;
   color: ${colors.white};
+`
+
+export const CartList = styled.ul`
+  max-height: 74vh;
+  overflow-y: auto;
 `
 
 export const CartItem = styled.li`
